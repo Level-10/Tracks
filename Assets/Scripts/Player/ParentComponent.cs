@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParentComponent : MonoBehaviour
+public abstract class ParentComponent : MonoBehaviour
 {
     [SerializeField] protected Player playerRef = null;
     protected virtual void Start()

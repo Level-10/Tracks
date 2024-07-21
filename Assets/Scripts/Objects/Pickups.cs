@@ -4,21 +4,18 @@ using UnityEngine;
 
 
 
-public class Pickups : MonoBehaviour
+public abstract class Pickups : MonoBehaviour
 {
-    [SerializeField] Collider2D boxCollider = null;
-    void Start()
+    [SerializeField] protected Collider2D boxCollider = null;
+    [SerializeField] protected Inventory inventory = null;
+    protected virtual void Start()
     {
+        inventory = FindObjectOfType<Inventory>();
         boxCollider = GetComponent<Collider2D>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger Enter !");
-        if (collision.CompareTag("Player"))
-        {
-            //Player _player = _collision.transform.GetComponent<Player>();
-            Destroy(gameObject);
-        }
+        
     }
 }
