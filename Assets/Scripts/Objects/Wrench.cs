@@ -12,7 +12,7 @@ public class Wrench : Pickups
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player")) {
-            inventory.AddKey(ItemTypes.wrench);
+            //inventory.AddKey(ItemTypes.wrench);
             Destroy(gameObject);
         }
 
