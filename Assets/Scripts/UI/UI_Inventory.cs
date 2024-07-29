@@ -12,8 +12,6 @@ public class UI_Inventory : MonoBehaviour
     [SerializeField] Inventory inventoryRef = null;
     [SerializeField] GameObject UI_Item = null;
 
-    
-
     void Start()
     {
         // Recup in Resources folder by Path
@@ -39,6 +37,7 @@ public class UI_Inventory : MonoBehaviour
 
     void DrawInventory()
     {
+        
         Debug.Log("Item catch !");
         //Update List
     }
@@ -48,6 +47,5 @@ public class UI_Inventory : MonoBehaviour
     void TestDraw()
     {
         Instantiate(UI_Item, this.transform);
-        
     }
 }

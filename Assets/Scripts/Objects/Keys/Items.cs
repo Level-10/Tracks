@@ -2,22 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum KeyTypes
+public enum ItemTypes
 {
     // When use enum for chose th type, make a .ToString() for set litteral enum as a string
     SmallKey,
     MediumKey,
     GoldKey,
-    key
+    Wrench,
+    none
 }
 
-public class Keys : Pickups
+public class Items : Pickups
 {
-    [SerializeField] KeyTypes keyType = KeyTypes.key;
+    [SerializeField] ItemTypes Type = ItemTypes.none;
 
     protected override void Start()
     {
         base.Start();
+        // Already invoke OnCatchItem
     }
 
     /*protected override void OnTriggerEnter2D(Collider2D collision)
@@ -27,7 +29,8 @@ public class Keys : Pickups
 
     protected override void AddItemToInventory()
     {
-        ItemsStruct _item = new ItemsStruct(keyType.ToString(), GetComponent<Pickups>());
+        WorldManager.Instance.MyInventory.Pickups.Add(Type);
+        //ItemsStruct _item = new ItemsStruct(keyType.ToString(), GetComponent<Pickups>());
         //Inventory.Instance.AddItem(_item);
     }
 }

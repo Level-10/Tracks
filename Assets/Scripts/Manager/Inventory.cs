@@ -1,9 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Xml.Linq;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Inventory : MonoBehaviour
 {
@@ -12,15 +9,13 @@ public class Inventory : MonoBehaviour
     [SerializeField] int goldKeysCount = 0;
     [SerializeField] int WrenchesCount = 0;*/
 
-    [SerializeField] List<ItemsStruct> pickups = new List<ItemsStruct>();
-
-    Dictionary<string, ItemsStruct> Items = new Dictionary<string, ItemsStruct>();
+    [SerializeField] List<Enum> pickups = new List<Enum>();
     
-    public List<ItemsStruct> Pickups => pickups;
+    public List<Enum> Pickups => pickups;
 
     void Start()
     {
-        WorldManager.Instance.MyInventory = this;
+        WorldManager.Instance.MyInventory = this; // DON'T WORK
     }
 
     void Update()
@@ -28,9 +23,8 @@ public class Inventory : MonoBehaviour
         
     }
 
-    public void AddItem(ItemsStruct _item)
+    /*public void AddItem(ItemsStruct _item)
     {
-        Debug.Log("Enter function");
         int _size = pickups.Count;
         if (_size <= 0) {
             pickups.Add(_item);
@@ -50,16 +44,12 @@ public class Inventory : MonoBehaviour
                 pickups.Add(_item);
             }
         }
+    }*/
+
         /*if (_index == ItemTypes.smallKey) smallKeysCount++;
         else if (_index == ItemTypes.greyKey) greyKeysCount++;
         else if (_index == ItemTypes.goldKey) goldKeysCount++;
         else if (_index == ItemTypes.wrench) WrenchesCount++;*/
-    }
-
-    void DictionnaryAdd()
-    {
-        //Items.Add("Wrench", new ItemsStruct("Wrench", );
-    }
 
 
 }
