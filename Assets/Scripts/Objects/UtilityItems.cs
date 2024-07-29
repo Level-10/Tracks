@@ -22,8 +22,8 @@ public class UtilityItems : Pickups
         if (collision.CompareTag("Player"))
         {
             // Set name par rapport à l'enum selectionné
-            ItemsStruct _item = new ItemsStruct(itemType.ToString(), 1);
-            Inventory.Instance.AddItem(_item);
+            //ItemsStruct _item = new ItemsStruct(itemType.ToString(), 1);
+            //Inventory.Instance.AddItem(_item);
             Destroy(gameObject);
         }
 

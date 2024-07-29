@@ -20,16 +20,14 @@ public class Keys : Pickups
         base.Start();
     }
 
-
-    protected override void OnTriggerEnter2D(Collider2D collision)
+    /*protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
-            //Player _player = collision.GetComponent<Player>();
-            // Set name par rapport à l'enum selectionné
-            ItemsStruct _item = new ItemsStruct(keyType.ToString(), 1);
-            Inventory.Instance.AddItem(_item);
-            Destroy(gameObject);
-        }
+        base.OnTriggerEnter2D(collision);
+    }*/
+
+    protected override void AddItemToInventory()
+    {
+        ItemsStruct _item = new ItemsStruct(keyType.ToString(), GetComponent<Pickups>());
+        //Inventory.Instance.AddItem(_item);
     }
 }

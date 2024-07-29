@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Xml.Linq;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class Inventory : Singleton<Inventory>
+public class Inventory : MonoBehaviour
 {
     /*[SerializeField] int smallKeysCount = 0;
     [SerializeField] int greyKeysCount = 0;
@@ -11,9 +14,13 @@ public class Inventory : Singleton<Inventory>
 
     [SerializeField] List<ItemsStruct> pickups = new List<ItemsStruct>();
 
-    protected override void Start()
+    Dictionary<string, ItemsStruct> Items = new Dictionary<string, ItemsStruct>();
+    
+    public List<ItemsStruct> Pickups => pickups;
+
+    void Start()
     {
-        base.Start();
+        WorldManager.Instance.MyInventory = this;
     }
 
     void Update()
@@ -35,7 +42,7 @@ public class Inventory : Singleton<Inventory>
             if (pickups[i].ItemName == _item.ItemName)
             {
                 // If find an item, increment his nb
-                _item =  new ItemsStruct(_item.ItemName, _item.ItemNb + pickups[i].ItemNb);
+                //_item =  new ItemsStruct(_item.ItemName, _item.ItemNb + pickups[i].ItemNb);
                 return;
             } else
             {
@@ -48,4 +55,11 @@ public class Inventory : Singleton<Inventory>
         else if (_index == ItemTypes.goldKey) goldKeysCount++;
         else if (_index == ItemTypes.wrench) WrenchesCount++;*/
     }
+
+    void DictionnaryAdd()
+    {
+        //Items.Add("Wrench", new ItemsStruct("Wrench", );
+    }
+
+
 }
