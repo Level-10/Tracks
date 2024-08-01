@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1756657380575384237}
   - component: {fileID: 7270332531916907870}
   m_Layer: 5
-  m_Name: GreyKey
+  m_Name: GoldKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 73d1dd7217be73048acb67126079f3cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a1c9a3eb5d3eeaa4381fb8271478408a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -110,7 +110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 162, y: 0}
+  m_AnchoredPosition: {x: 162, y: 16.1}
   m_SizeDelta: {x: 100, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7623307649073839849
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Grey Key
+  m_text: Gold Key
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c183d77870769ca4e8f35c97ad6ce075, type: 2}
   m_sharedMaterial: {fileID: 1444604445339165070, guid: c183d77870769ca4e8f35c97ad6ce075, type: 2}
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -27.94698, z: -56.488617, w: -24.379301}
+  m_margin: {x: 0, y: -9.219946, z: -66.2681, w: -40.337124}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

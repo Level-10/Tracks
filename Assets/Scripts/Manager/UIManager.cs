@@ -8,6 +8,11 @@ public class UIManager : Singleton<UIManager>
 
     public UI_Inventory InventoryUI => inventoryUI;
 
+    protected override void Awake()
+    {
+        base.Awake();
+    }
+
     protected override void Start()
     {
         base.Start();

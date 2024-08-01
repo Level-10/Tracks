@@ -6,7 +6,7 @@ public enum ItemTypes
 {
     // When use enum for chose th type, make a .ToString() for set litteral enum as a string
     SmallKey,
-    MediumKey,
+    GreyKey,
     GoldKey,
     Wrench,
     none
@@ -29,6 +29,7 @@ public class Items : Pickups
 
     protected override void AddItemToInventory()
     {
+        
         WorldManager.Instance.MyInventory.Pickups.Add(Type);
         //ItemsStruct _item = new ItemsStruct(keyType.ToString(), GetComponent<Pickups>());
         //Inventory.Instance.AddItem(_item);

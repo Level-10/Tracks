@@ -27,6 +27,7 @@ public class UI_Inventory : MonoBehaviour
 
     void Init()
     {
+        // Draw dans l'UI
         WorldManager.Instance.OnItemCatch += DrawInventory;
     }
 
@@ -37,15 +38,25 @@ public class UI_Inventory : MonoBehaviour
 
     void DrawInventory()
     {
-        
+        int _size = WorldManager.Instance.MyInventory.Pickups.Count;
+        List<ItemTypes> _list = WorldManager.Instance.MyInventory.Pickups;
+        for (int i = 0; i < _size; i++) {
+            GameObject _prefab = Resources.Load($"Prefabs/UI/{_list[i].ToString()}") as GameObject;
+            //GameObject _instance = Instantiate(_prefab);
+            //_instance.transform.SetParent(FindObjectOfType<UI_Inventory>());
+            //NE PAS DRAW CHAQUE ITEM À CHAQUE FOIS sinon ça draw le 1e puis le 1e et 2e
+            DrawItem(_prefab);
+            //Si je met un return ça ne va draw que le premier
+            Debug.Log(_list[i]);
+        }
         Debug.Log("Item catch !");
         //Update List
     }
     // for each items dans la liste d'inventaire : Draw une image cliquable
     // Faire un event quand je ramasse un objet pour update l'UI
 
-    void TestDraw()
+    void DrawItem(GameObject _item)
     {
-        Instantiate(UI_Item, this.transform);
+        Instantiate(_item, this.transform);
     }
 }

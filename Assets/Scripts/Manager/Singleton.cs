@@ -7,9 +7,14 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     static T instance = null;
     public static T Instance => instance;
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         Init();
+    }
+
+    protected virtual void Start()
+    {
+        //Init();
     }
 
     void Init()

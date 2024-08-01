@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1756657380575384237}
   - component: {fileID: 7270332531916907870}
   m_Layer: 5
-  m_Name: GreyKey
+  m_Name: SmallKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 73d1dd7217be73048acb67126079f3cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50d9a3931030d0e4a8c72f4710569d08, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Grey Key
+  m_text: Small Key
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c183d77870769ca4e8f35c97ad6ce075, type: 2}
   m_sharedMaterial: {fileID: 1444604445339165070, guid: c183d77870769ca4e8f35c97ad6ce075, type: 2}
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -27.94698, z: -56.488617, w: -24.379301}
+  m_margin: {x: 0, y: -25.354725, z: -92.7753, w: -23.049788}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

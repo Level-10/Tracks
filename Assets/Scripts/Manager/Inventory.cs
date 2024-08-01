@@ -9,13 +9,13 @@ public class Inventory : MonoBehaviour
     [SerializeField] int goldKeysCount = 0;
     [SerializeField] int WrenchesCount = 0;*/
 
-    [SerializeField] List<Enum> pickups = new List<Enum>();
+    [SerializeField] List<ItemTypes> pickups = new List<ItemTypes>();
     
-    public List<Enum> Pickups => pickups;
+    public List<ItemTypes> Pickups => pickups;
 
     void Start()
     {
-        WorldManager.Instance.MyInventory = this; // DON'T WORK
+        WorldManager.Instance.MyInventory = this;
     }
 
     void Update()
