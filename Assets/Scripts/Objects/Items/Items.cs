@@ -14,7 +14,9 @@ public enum ItemTypes
 
 public class Items : Pickups
 {
-    [SerializeField] ItemTypes Type = ItemTypes.none;
+    [SerializeField] ItemTypes type = ItemTypes.none;
+
+    public ItemTypes Type => type;
 
     protected override void Start()
     {
@@ -30,8 +32,10 @@ public class Items : Pickups
     protected override void AddItemToInventory()
     {
         
-        WorldManager.Instance.MyInventory.Pickups.Add(Type);
+        WorldManager.Instance.MyInventory.Pickups.Add(type);
         //ItemsStruct _item = new ItemsStruct(keyType.ToString(), GetComponent<Pickups>());
         //Inventory.Instance.AddItem(_item);
+        WorldManager.Instance.OnItemCatch?.Invoke(type);
+        //UIManager.Instance.InventoryUI.DrawItem(Type);
     }
 }

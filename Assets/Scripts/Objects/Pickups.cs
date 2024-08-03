@@ -20,7 +20,6 @@ public abstract class Pickups : MonoBehaviour
         {
             if (WorldManager.Instance.MyInventory.Pickups.Count == 4) return;
             AddItemToInventory();
-            WorldManager.Instance.OnItemCatch.Invoke();
         }
         Destroy(gameObject);
     }
