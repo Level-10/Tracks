@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5481962671249644297}
   - component: {fileID: -6444052360026180418}
   m_Layer: 0
-  m_Name: GreyKey_Pickup
+  m_Name: GoldKey_Pickup
   m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 73d1dd7217be73048acb67126079f3cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a1c9a3eb5d3eeaa4381fb8271478408a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -145,4 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxCollider: {fileID: 0}
   inventory: {fileID: 0}
-  type: 1
+  type: 2

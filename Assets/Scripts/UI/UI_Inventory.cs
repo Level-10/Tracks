@@ -28,6 +28,7 @@ public class UI_Inventory : MonoBehaviour
     void Init()
     {
         // Draw dans l'UI
+        //WorldManager.Instance.OnItemCatch += DrawInventory;
         WorldManager.Instance.OnItemCatch += DrawItem;
     }
 
@@ -39,6 +40,12 @@ public class UI_Inventory : MonoBehaviour
     void DrawInventory()
     {
 
+        int _size = WorldManager.Instance.MyInventory.Pickups.Count;
+        List<ItemTypes> _list = WorldManager.Instance.MyInventory.Pickups;
+        for (int i = 0; i < _size; i++)
+        {
+            DrawItem(_list[i]);
+        }
         /*int _size = WorldManager.Instance.MyInventory.Pickups.Count;
         List<ItemTypes> _list = WorldManager.Instance.MyInventory.Pickups;
         for (int i = 0; i < _size; i++) {
@@ -53,7 +60,7 @@ public class UI_Inventory : MonoBehaviour
             Debug.Log(_list[i]);
             //ENVOYER UNE REF A DRAW ???
         }*/
-        Debug.Log("Item catch !");
+        Debug.Log("Inventory Draw !");
         //Update List
     }
     // for each items dans la liste d'inventaire : Draw une image cliquable

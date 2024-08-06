@@ -5,6 +5,7 @@ public class WorldManager : Singleton<WorldManager>
 {
     #region Events
     public Action<ItemTypes> OnItemCatch;
+    public Action<GameObject> OnItemDrop;
     #endregion Events
     #region Tags
     public static readonly string PLAYER = "Player";
@@ -23,7 +24,6 @@ public class WorldManager : Singleton<WorldManager>
     protected override void Start()
     {
         base.Start();
-        string _string = Tags.T_FURNITURE;
     }
 
     void Update()

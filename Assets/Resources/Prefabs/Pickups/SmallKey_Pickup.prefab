@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5481962671249644297}
   - component: {fileID: -6444052360026180418}
   m_Layer: 0
-  m_Name: GreyKey_Pickup
+  m_Name: SmallKey_Pickup
   m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 73d1dd7217be73048acb67126079f3cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50d9a3931030d0e4a8c72f4710569d08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,18 +118,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0006173849}
+  m_Offset: {x: 0, y: -0.00076806545}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.40625, y: 0.21875}
+    oldSize: {x: 0.3125, y: 0.15625}
     newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.41271687, y: 0.22065973}
+  m_Size: {x: 0.3166542, y: 0.15877342}
   m_EdgeRadius: 0
 --- !u!114 &-6444052360026180418
 MonoBehaviour:
@@ -145,4 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxCollider: {fileID: 0}
   inventory: {fileID: 0}
-  type: 1
+  type: 0

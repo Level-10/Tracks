@@ -31,10 +31,8 @@ public class Items : Pickups
 
     protected override void AddItemToInventory()
     {
-        
-        WorldManager.Instance.MyInventory.Pickups.Add(type);
         //ItemsStruct _item = new ItemsStruct(keyType.ToString(), GetComponent<Pickups>());
-        //Inventory.Instance.AddItem(_item);
+        //WorldManager.Instance.MyInventory.AddItem(_type);
         WorldManager.Instance.OnItemCatch?.Invoke(type);
         //UIManager.Instance.InventoryUI.DrawItem(Type);
     }

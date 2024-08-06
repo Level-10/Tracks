@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1756657380575384237}
   - component: {fileID: 7270332531916907870}
   - component: {fileID: 5407430587730464653}
+  - component: {fileID: -6848652942647868743}
   m_Layer: 5
   m_Name: GoldKey
   m_TagString: Untagged
@@ -36,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100.834, y: 54.2953}
+  m_AnchoredPosition: {x: 21.101807, y: 10.8125}
+  m_SizeDelta: {x: 82.8285, y: 44.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1756657380575384237
 CanvasRenderer:
@@ -121,6 +122,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-6848652942647868743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5911465678804473312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35578f3fa4e213489aed97f3c710dff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 0}
 --- !u!1 &7247603480796829746
 GameObject:
   m_ObjectHideFlags: 0

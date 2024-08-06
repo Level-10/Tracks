@@ -12,16 +12,30 @@ public class UI_Items : MonoBehaviour
 
     void Update()
     {
-        
+        // Idk if a better solution exist
+        if (Input.GetMouseButtonDown(1)) {
+            DropItem();
+            return;
+        }
     }
 
     void Init()
     {
         button = GetComponent<Button>();
+        button.onClick.AddListener(UseItem);
+        //button.clickable
     }
 
-    void ItemBehaviour()
+    void UseItem()
     {
-        
+        Debug.Log("Item Used !");
+    }
+
+    void DropItem()
+    {
+        //WorldManager.Instance.MyInventory.RemoveItemFromInventory();
+        Destroy(gameObject);
+        WorldManager.Instance.OnItemDrop?.Invoke(gameObject);
+        Debug.Log("Item Dropped !");
     }
 }

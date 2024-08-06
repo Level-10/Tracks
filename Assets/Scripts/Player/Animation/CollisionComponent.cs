@@ -15,7 +15,7 @@ public class CollisionComponent : MonoBehaviour
 
     void Update()
     {
-        FindItemAroundPlayer();
+        FindFurnitures();
     }
 
     void Init()
@@ -24,17 +24,17 @@ public class CollisionComponent : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    RaycastHit2D FindItemAroundPlayer()
+    RaycastHit2D FindAroundPlayer()
     {
         return Physics2D.CircleCast(transform.position, 2, Vector2.right);
     }
 
-    void ItemFind()
+    void FindFurnitures()
     {
-        RaycastHit2D _result = FindItemAroundPlayer();
-        if (_result.collider.gameObject.CompareTag(Tags.T_FURNITURE))
+        RaycastHit2D _result = FindAroundPlayer();
+        if (_result.rigidbody.gameObject.CompareTag(Tags.FURNITURE))
         {
-
+            Debug.Log("Furniture at hand range");
         }
         //Find type of furniture for draw interact UI or to use the right object 
         //if (_result.rigidbody.gameObject.GetComponent<Items>().GetType() == typeof(Items)) 
