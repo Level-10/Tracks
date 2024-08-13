@@ -33,6 +33,7 @@ public class UI_Items : MonoBehaviour
 
     void DropItem()
     {
+        //For the moment it's discard all items
         //WorldManager.Instance.MyInventory.RemoveItemFromInventory();
         Destroy(gameObject);
         WorldManager.Instance.OnItemDrop?.Invoke(gameObject);

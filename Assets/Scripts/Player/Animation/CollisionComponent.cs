@@ -8,14 +8,18 @@ public class CollisionComponent : MonoBehaviour
 {
     [SerializeField] CapsuleCollider2D capsuleCollider = null;
     [SerializeField] Rigidbody2D rb = null;
+    [SerializeField] LayerMask furnitureMask = 3;
+    [SerializeField] float detectionRange = 1;
+
     void Start()
     {
         Init();
+        InvokeRepeating(nameof(FindFurnitures), 1, .2f);
     }
 
     void Update()
     {
-        FindFurnitures();
+        
     }
 
     void Init()
@@ -24,18 +28,16 @@ public class CollisionComponent : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    RaycastHit2D FindAroundPlayer()
+    bool FindAroundPlayer()
     {
-        return Physics2D.CircleCast(transform.position, 2, Vector2.right);
+        return Physics2D.CircleCast(transform.position, detectionRange, Vector2.right, 0, furnitureMask);
     }
 
     void FindFurnitures()
     {
-        RaycastHit2D _result = FindAroundPlayer();
-        if (_result.rigidbody.gameObject.CompareTag(Tags.FURNITURE))
-        {
+        bool _result = FindAroundPlayer();
+        if (!_result) return;
             Debug.Log("Furniture at hand range");
-        }
         //Find type of furniture for draw interact UI or to use the right object 
         //if (_result.rigidbody.gameObject.GetComponent<Items>().GetType() == typeof(Items)) 
     }
@@ -43,7 +45,7 @@ public class CollisionComponent : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 2);
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
         Gizmos.color = Color.white;
     }
 }

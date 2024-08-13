@@ -24,10 +24,10 @@ public class Items : Pickups
         // Already invoke OnCatchItem
     }
 
-    /*protected override void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
         base.OnTriggerEnter2D(collision);
-    }*/
+    }
 
     protected override void AddItemToInventory()
     {
@@ -35,5 +35,6 @@ public class Items : Pickups
         //WorldManager.Instance.MyInventory.AddItem(_type);
         WorldManager.Instance.OnItemCatch?.Invoke(type);
         //UIManager.Instance.InventoryUI.DrawItem(Type);
+        UIManager.Instance.OnDrawInventory?.Invoke();
     }
 }

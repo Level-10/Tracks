@@ -11,6 +11,7 @@ public class UI_Inventory : MonoBehaviour
 
     [SerializeField] Inventory inventoryRef = null;
     [SerializeField] GameObject UI_Item = null;
+    List<ItemTypes> pickupsUI = null;
 
     void Start()
     {
@@ -29,7 +30,8 @@ public class UI_Inventory : MonoBehaviour
     {
         // Draw dans l'UI
         //WorldManager.Instance.OnItemCatch += DrawInventory;
-        WorldManager.Instance.OnItemCatch += DrawItem;
+        //WorldManager.Instance.OnItemCatch += DrawItem;
+        UIManager.Instance.OnDrawInventory += DrawInventory;
     }
 
     void GetInventoryRef()
@@ -39,12 +41,14 @@ public class UI_Inventory : MonoBehaviour
 
     void DrawInventory()
     {
-
-        int _size = WorldManager.Instance.MyInventory.Pickups.Count;
-        List<ItemTypes> _list = WorldManager.Instance.MyInventory.Pickups;
+        //if already draw, clear then redraw
+        if (pickupsUI != null)
+            pickupsUI.Clear();
+        pickupsUI = WorldManager.Instance.MyInventory.Pickups;
+        int _size = pickupsUI.Count;
         for (int i = 0; i < _size; i++)
         {
-            DrawItem(_list[i]);
+            DrawItem(pickupsUI[i]);
         }
         /*int _size = WorldManager.Instance.MyInventory.Pickups.Count;
         List<ItemTypes> _list = WorldManager.Instance.MyInventory.Pickups;
