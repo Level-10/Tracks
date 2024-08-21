@@ -1039,7 +1039,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782855610}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1056,7 +1056,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!212 &782855614
 SpriteRenderer:
@@ -1423,9 +1423,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4d76e429eacf3459dcbf42d38f8a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
   inventoryRef: {fileID: 0}
   UI_Item: {fileID: 0}
+  pickupsUI: 
 --- !u!114 &1215224108
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -36,5 +36,6 @@ public class Items : Pickups
         WorldManager.Instance.OnItemCatch?.Invoke(type);
         //UIManager.Instance.InventoryUI.DrawItem(Type);
         UIManager.Instance.OnDrawInventory?.Invoke();
+        //Debug.Log("Item Catch and Draw");
     }
 }

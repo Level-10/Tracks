@@ -17,10 +17,16 @@ public class UIManager : Singleton<UIManager>
     protected override void Start()
     {
         base.Start();
+        Init();
     }
 
     void Update()
     {
         
+    }
+
+    void Init()
+    {
+        inventoryUI = GetComponent<UI_Inventory>();
     }
 } 

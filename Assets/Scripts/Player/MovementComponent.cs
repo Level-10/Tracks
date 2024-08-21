@@ -23,6 +23,7 @@ public class MovementComponent : ParentComponent
     {
         Vector2 _moveAxis = playerRef.Inputs.Movement.ReadValue<Vector2>();
 
+        // Have to change by Impulse
         transform.position += transform.up * moveSpeed * _moveAxis.y * Time.deltaTime;
         transform.position += transform.right * moveSpeed * _moveAxis.x * Time.deltaTime;
         if (_moveAxis.x != 0 || _moveAxis.y != 0 || (_moveAxis.x != 0 && _moveAxis.y != 0)) { 

@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class UI_Inventory : MonoBehaviour
 {
     
-    [SerializeField] List<ItemsStruct> items = null;
+    //[SerializeField] List<ItemsStruct> items = null;
     //[SerializeField] List<GameObject> uiSpawned = null;
 
     [SerializeField] Inventory inventoryRef = null;
     [SerializeField] GameObject UI_Item = null;
-    List<ItemTypes> pickupsUI = null;
+    [SerializeField] List<ItemTypes> pickupsUI = null;
 
     void Start()
     {
@@ -43,7 +43,7 @@ public class UI_Inventory : MonoBehaviour
     {
         //if already draw, clear then redraw
         if (pickupsUI != null)
-            pickupsUI.Clear();
+            pickupsUI.Clear(); // Clear the original list :\
         pickupsUI = WorldManager.Instance.MyInventory.Pickups;
         int _size = pickupsUI.Count;
         for (int i = 0; i < _size; i++)
@@ -70,14 +70,14 @@ public class UI_Inventory : MonoBehaviour
     // for each items dans la liste d'inventaire : Draw une image cliquable
     // Faire un event quand je ramasse un objet pour update l'UI
 
-    public void DrawItem(GameObject _item)
+    public GameObject DrawItem(GameObject _item)
     {
-        /*return*/ Instantiate(_item, this.transform);
+        return Instantiate(_item, this.transform);
     }
     
-    public void DrawItem(ItemTypes _item)
+    public GameObject DrawItem(ItemTypes _item)
     {
         GameObject _prefab = Resources.Load($"Prefabs/UI/{_item.ToString()}") as GameObject;
-        /*return*/ Instantiate(_prefab, this.transform);
+        return Instantiate(_prefab, this.transform);
     }
 }

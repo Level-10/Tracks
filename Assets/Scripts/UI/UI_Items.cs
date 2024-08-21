@@ -13,10 +13,10 @@ public class UI_Items : MonoBehaviour
     void Update()
     {
         // Idk if a better solution exist
-        if (Input.GetMouseButtonDown(1)) {
-            DropItem();
-            return;
-        }
+        //if (Input.GetMouseButtonDown(1)) {
+        //    DropItem();
+        //    return;
+        //}
     }
 
     void Init()

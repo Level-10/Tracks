@@ -18,6 +18,7 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         WorldManager.Instance.MyInventory = this;
+        Init();
     }
 
     void Update()
@@ -27,7 +28,7 @@ public class Inventory : MonoBehaviour
 
     void Init()
     {
-        WorldManager.Instance.OnItemCatch += AddItemToInventory; // don't work ? 
+        WorldManager.Instance.OnItemCatch += AddItemToInventory;
     }
 
     public void AddItemToInventory(ItemTypes _type)

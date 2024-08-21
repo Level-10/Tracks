@@ -16,10 +16,12 @@ public abstract class Pickups : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(WorldManager.PLAYER))
+        //if (collision.CompareTag(WorldManager.PLAYER))
+        if(collision.GetComponent<Player>())
         {
             if (WorldManager.Instance.MyInventory.Pickups.Count == 4) return;
             AddItemToInventory();
+            //Debug.Log("Trigger Enter");
         }
         Destroy(gameObject);
     }
