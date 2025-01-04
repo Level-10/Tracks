@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRef: {fileID: 0}
+  rb: {fileID: 0}
   moveSpeed: 0
   initSpeed: 5
   isMoving: 0
@@ -242,8 +243,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1592989, y: -0.16318429}
-  m_Size: {x: 1.0827999, y: 2.497063}
+  m_Offset: {x: 0.1592989, y: -0.71824926}
+  m_Size: {x: 1.0827999, y: 1.386933}
   m_Direction: 0
 --- !u!50 &8208672711439148365
 Rigidbody2D:
@@ -254,7 +255,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7188095454339917894}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -271,4 +272,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6

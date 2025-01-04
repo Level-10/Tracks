@@ -42,8 +42,8 @@ public class UI_Inventory : MonoBehaviour
     void DrawInventory()
     {
         //if already draw, clear then redraw
-        if (pickupsUI != null)
-            pickupsUI.Clear(); // Clear the original list :\
+        if (pickupsUI != null) Debug.Log("Clear");
+            //pickupsUI.Clear(); // Clear the original list :\
         pickupsUI = WorldManager.Instance.MyInventory.Pickups;
         int _size = pickupsUI.Count;
         for (int i = 0; i < _size; i++)
