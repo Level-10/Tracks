@@ -7,10 +7,10 @@ public class WorldManager : Singleton<WorldManager>
     public Action<ItemTypes> OnItemCatch;
     public Action<GameObject> OnItemDrop;
     #endregion Events
-    #region Tags
-    public static readonly string PLAYER = "Player";
-    public static readonly string PICKUPS = "Pickups";
-    #endregion Tags
+    //#region Tags
+    //public static readonly string PLAYER = "Player";
+    //public static readonly string PICKUPS = "Pickups";
+    //#endregion Tags
 
     [SerializeField] Inventory inventory = null;
 
