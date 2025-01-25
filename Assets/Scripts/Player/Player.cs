@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] MovementComponent movement = null;
     [SerializeField] CollisionComponent collision = null;
     [SerializeField] CharacterAnimator characterAnimator = null;
+
+    [SerializeField] InventoryController inventoryController = null;
     #endregion Components
 
     public InputComponent Inputs => inputs;
