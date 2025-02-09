@@ -5,29 +5,32 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIInventoryDescription : MonoBehaviour
+namespace Inventory.UI
 {
-    [SerializeField] Image itemImage;
-    [SerializeField] TMP_Text title;
-    [SerializeField] TMP_Text description;
-
-    private void Awake()
+    public class UIInventoryDescription : MonoBehaviour
     {
-        ResetDescription();
-    }
+        [SerializeField] Image itemImage;
+        [SerializeField] TMP_Text title;
+        [SerializeField] TMP_Text description;
 
-    public void ResetDescription()
-    {
-        this.itemImage.gameObject.SetActive(false);
-        this.title.text = "";
-        this.description.text = "";
-    }
+        private void Awake()
+        {
+            ResetDescription();
+        }
 
-    public void SetDescription(Sprite _sprite, string _itemName, string _itemDescription)
-    {
-        this.itemImage.gameObject.SetActive(true);
-        this.itemImage.sprite = _sprite;
-        this.title.text = _itemName;
-        this.description.text = _itemDescription;
+        public void ResetDescription()
+        {
+            itemImage.gameObject.SetActive(false);
+            title.text = "";
+            description.text = "";
+        }
+
+        public void SetDescription(Sprite _sprite, string _itemName, string _itemDescription)
+        {
+            itemImage.gameObject.SetActive(true);
+            itemImage.sprite = _sprite;
+            title.text = _itemName;
+            description.text = _itemDescription;
+        }
     }
 }

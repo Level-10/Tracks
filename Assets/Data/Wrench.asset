@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff3cd68985a8eb4b81aa819f7ec0e2f, type: 3}
+  m_Name: Wrench
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 1
+  <MaxStackSize>k__BackingField: 5
+  <Name>k__BackingField: Wrench
+  <Description>k__BackingField: Open some things or break it.
+  <ItemImage>k__BackingField: {fileID: 21300000, guid: 133442d6f030dd54dac3eeca5d36aa01, type: 3}
