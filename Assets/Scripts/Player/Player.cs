@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] CollisionComponent collision = null;
     [SerializeField] CharacterAnimator characterAnimator = null;
 
-    [SerializeField] InventoryController inventoryController = null;
+    [SerializeField] Inventory.InventoryController inventoryController = null;
     #endregion Components
 
     public InputComponent Inputs => inputs;

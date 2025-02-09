@@ -7,14 +7,14 @@ public class MouseFollower : MonoBehaviour
     [SerializeField] Canvas canvas;
     [SerializeField] Camera mainCam;
 
-    [SerializeField] UIInventoryItem item;
+    [SerializeField] Inventory.UI.UIInventoryItem item;
 
     private void Awake()
     {
         canvas = transform.root.GetComponent<Canvas>();
         mainCam = Camera.main;
         //Find item because is a child of MouseFollower
-        item = GetComponentInChildren<UIInventoryItem>();
+        item = GetComponentInChildren<Inventory.UI.UIInventoryItem>();
     }
 
     public void SetData(Sprite _sprite, int _quantity)

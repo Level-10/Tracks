@@ -7,10 +7,10 @@ using UnityEngine;
 public abstract class Pickups : MonoBehaviour
 {
     [SerializeField] protected Collider2D boxCollider = null;
-    [SerializeField] protected Inventory inventory = null;
+    [SerializeField] protected Old.Inventory inventory = null;
     protected virtual void Start()
     {
-        inventory = FindObjectOfType<Inventory>();
+        inventory = FindObjectOfType<Old.Inventory>();
         boxCollider = GetComponent<Collider2D>();
     }
 

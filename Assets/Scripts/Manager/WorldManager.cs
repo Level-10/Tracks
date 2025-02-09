@@ -12,9 +12,9 @@ public class WorldManager : Singleton<WorldManager>
     //public static readonly string PICKUPS = "Pickups";
     //#endregion Tags
 
-    [SerializeField] Inventory inventory = null;
+    [SerializeField] Old.Inventory inventory = null;
 
-    public Inventory MyInventory { get => inventory;  set => inventory = value; }
+    public Old.Inventory MyInventory { get => inventory;  set => inventory = value; }
 
     protected override void Awake()
     {

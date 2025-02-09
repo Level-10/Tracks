@@ -9,7 +9,7 @@ public class UI_Inventory : MonoBehaviour
     //[SerializeField] List<ItemsStruct> items = null;
     //[SerializeField] List<GameObject> uiSpawned = null;
 
-    [SerializeField] Inventory inventoryRef = null;
+    [SerializeField] Old.Inventory inventoryRef = null;
     [SerializeField] GameObject UI_Item = null;
     [SerializeField] List<ItemTypes> pickupsUI = null;
 

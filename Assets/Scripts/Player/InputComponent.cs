@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Inventory;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,7 +9,7 @@ public class InputComponent : ParentComponent
     [SerializeField] InputAction interact = null;
     [SerializeField] InputAction openInventory = null;
 
-    [SerializeField] InventoryController inventoryControllerRef = null;
+    [SerializeField] Inventory.InventoryController inventoryControllerRef = null;
 
     public InputAction Movement => movement;
     public InputAction Interact => interact;
@@ -55,7 +54,7 @@ public class InputComponent : ParentComponent
 
     void Subscribe()
     {
-        inventoryControllerRef = FindObjectOfType<InventoryController>();
+        inventoryControllerRef = FindObjectOfType<Inventory.InventoryController>();
         openInventory.performed += inventoryControllerRef.OpenInventory;
     }
 }
